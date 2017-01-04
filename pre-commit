@@ -1,0 +1,8 @@
+#!/usr/bin/env python3
+import subprocess
+import sys
+
+if (subprocess.call(["/usr/bin/python3", "tests.py"]) != 0):
+    print("Unit tests failed! Aborting commit...")
+    sys.exit(1)
+print("Unit test successfuly passed! Committing...")
