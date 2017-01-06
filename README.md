@@ -1,10 +1,18 @@
 # Quadratic Equations Solver
 
-This project demonstrates how to use pre commit hooks in git.
+Script finds roots of quadratic equations.
 
-1. Copy ```pre-commit``` file in ```.git/hooks/``` directory, give it execution permission ```chmod +x pre-commit```.
-2. Add something to staged area and try to commit. You will see an error message than commit is unsuccessful because of failed tests.
-3. Solve problem in ```quadratic_equation.py```, check that all tests run correctly, add it to staged area and try to commit again. You will see a message that commit is successful.
+# Usage
+
+    quadratic_equation import get_roots
+    get_roots(a, b, c)
+
+Where a, b,c - coefficients of equation ```ax^2+bx+c=0```.
+
+# Pre-commit hook
+
+Pre-commit hook allows to run unit tests in tests.py file when you try to commit. If one or more tests fails it will not allow to commit and show you appropriate error.
+Copy ```pre-commit``` file in ```.git/hooks/``` directory where project resides, give it execution permission ```chmod +x pre-commit```.
 
 # Requirement
 
